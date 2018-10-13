@@ -9,7 +9,7 @@ set ylabel "TIME_{AC} / TIME_{BC}"
 f(len, n, d, d_avg, e) = d / n
 ratio(AC, BC) = AC / BC
 
-set table "ACvsBC.dat"
+set table "XCSP3.dat"
 plot "results/CompetitionInstances.dat" index 0 \
      using (log10(f($2, $3, $4, $5, $6))):(log10(ratio($7, $8))) with table
 unset table
