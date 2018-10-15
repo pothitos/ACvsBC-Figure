@@ -3,7 +3,7 @@
 set border 3
 set tics nomirror
 
-set xlabel "f(len, n, d, d_{AVG}, e)"
+set xlabel "d / n"
 set ylabel "TIME_{AC} / TIME_{BC}"
 
 f(len, n, d, d_avg, e) = d / n
