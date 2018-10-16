@@ -17,7 +17,7 @@ unset table
 set logscale xy
 
 stats "CompetitionInstances.dat" index 0 using \
-     (f($2, $3, $4, $5, $6)):(ratio($7, $8)) nooutput
+      (f($2, $3, $4, $5, $6)):(ratio($7, $8)) nooutput
 
 plot "CompetitionInstances.dat" index 0 using \
         (f($2, $3, $4, $5, $6)):(ratio($7, $8)) notitle \
