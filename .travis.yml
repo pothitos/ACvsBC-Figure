@@ -1,5 +1,11 @@
 language: r
 
+addons:
+  apt:
+    packages:
+      - ghostscript
+      - texlive-font-utils
+
 sudo: required
 
 services:
@@ -25,6 +31,8 @@ script:
   - ./LOESS.R
   # Replot using LOESS output
   - ./XCSP3.plt
+  # Produce a PDF file too
+  - epstopdf XCSP3.eps
 
 after_success:
   # Decrypt private key for accessing web server
@@ -35,6 +43,6 @@ after_success:
   - chmod 600 key_for_uploading.pem
   # Upload to web server
   - scp -i key_for_uploading.pem -o StrictHostKeyChecking=no
-    XCSP3.eps XCSP3.tex pothitos@linux19.di.uoa.gr:public_html/papers/ACvsBC
+    XCSP3.{eps,pdf,tex} pothitos@linux19.di.uoa.gr:public_html/papers/ACvsBC
   - ssh -i key_for_uploading.pem pothitos@linux19.di.uoa.gr
-    chmod o+r public_html/papers/ACvsBC/XCSP3.{eps,tex}
+    chmod o+r public_html/papers/ACvsBC/XCSP3.{eps,pdf,tex}
