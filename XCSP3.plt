@@ -1,5 +1,8 @@
 #!/usr/bin/gnuplot
 
+set terminal epslatex
+set output "XCSP3.tex"
+
 set border 3
 set tics nomirror
 
