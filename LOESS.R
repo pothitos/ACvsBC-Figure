@@ -1,4 +1,4 @@
-#!/usr/bin/Rscript
+#!/usr/bin/env Rscript
 
 datapoints = read.delim("XCSP3.dat", header=F)
 smooth = loess(datapoints$V2 ~ datapoints$V1)
