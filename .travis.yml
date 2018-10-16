@@ -19,6 +19,9 @@ install:
   - echo
 
 script:
+  # Create input for LOESS
   - ./XCSP3.plt
+  # Locally Estimated Scatterplot Smoothing
   - ./LOESS.R
+  # Replot using LOESS output
   - ./XCSP3.plt
