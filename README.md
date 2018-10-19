@@ -4,4 +4,4 @@ This repository plots the figure included in the
 corresponding [article](https://github.com/pothitos/ACvsBC).
 
 The produced image is uploaded to a remote
-[folder](http://di.uoa.gr/~pothitos/papers/ACvsBC).
+[__folder__](http://di.uoa.gr/~pothitos/papers/ACvsBC).
