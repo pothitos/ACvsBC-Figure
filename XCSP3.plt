@@ -6,8 +6,8 @@ set output "XCSP3.tex"
 set border 3
 set tics nomirror
 
-set xlabel "d / n"
-set ylabel "TIME_{AC} / TIME_{BC}"
+set xlabel "$d / n$"
+set ylabel "$\\mathrm{TIME_{AC}} / \\mathrm{TIME_{BC}}$"
 
 f(len, n, d, d_avg, e) = d / n
 ratio(AC, BC) = AC / BC
