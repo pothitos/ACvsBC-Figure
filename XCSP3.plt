@@ -24,9 +24,9 @@ stats "CompetitionInstances.dat" index 0 using \
 
 plot "CompetitionInstances.dat" index 0 using \
         (f($2, $3, $4, $5, $6)):(ratio($7, $8)) notitle \
-        with points linecolor 1 pointtype 12, \
+        with points linecolor 1 pointtype 68, \
      "" index 1 using (f($2, $3, $4, $5, $6)):(STATS_min_y) notitle \
-        with points linecolor 1 pointtype 10, \
+        with points linecolor 1 pointtype 67, \
      "" index 2 using (f($2, $3, $4, $5, $6)):(STATS_max_y) notitle \
-        with points linecolor 1 pointtype 8, \
+        with points linecolor 1 pointtype 66, \
      "LOESS.dat" using (10**$1):(10**$2) smooth unique notitle
