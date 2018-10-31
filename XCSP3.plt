@@ -19,6 +19,9 @@ unset table
 
 set logscale xy
 
+set arrow from graph 0,first 1 to graph 1,first 1 nohead linetype 0
+set arrow from first 1,graph 0 to first 1,graph 1 nohead linetype 0
+
 stats "" index 0 using (f($2, $3, $4, $5, $6)):(ratio($7, $8)) nooutput
 
 plot "" index 0 using (f($2, $3, $4, $5, $6)):(ratio($7, $8)) notitle \
