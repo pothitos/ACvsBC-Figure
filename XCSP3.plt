@@ -19,11 +19,9 @@ unset table
 
 set logscale xy
 
-stats "CompetitionInstances.dat" index 0 using \
-      (f($2, $3, $4, $5, $6)):(ratio($7, $8)) nooutput
+stats "" index 0 using (f($2, $3, $4, $5, $6)):(ratio($7, $8)) nooutput
 
-plot "CompetitionInstances.dat" index 0 using \
-        (f($2, $3, $4, $5, $6)):(ratio($7, $8)) notitle \
+plot "" index 0 using (f($2, $3, $4, $5, $6)):(ratio($7, $8)) notitle \
         with points linecolor 1 pointtype 68, \
      "" index 1 using (f($2, $3, $4, $5, $6)):(STATS_min_y) notitle \
         with points linecolor 1 pointtype 67, \
