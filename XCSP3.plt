@@ -2,6 +2,7 @@
 
 set terminal epslatex
 set output "XCSP3.tex"
+set size 0.95
 
 set border 3
 set tics nomirror
