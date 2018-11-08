@@ -27,7 +27,7 @@ script:
   # Replot using LOESS output
   - ./XCSP3.plt
   # Produce a PDF file too
-  - epstopdf XCSP3.eps
+  - epstopdf --gsopt=-dCompatibilityLevel=1.5 XCSP3.eps
 
 after_success:
   # Decrypt private key for accessing web server
